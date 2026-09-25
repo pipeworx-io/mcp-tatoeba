@@ -2,8 +2,8 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.pipeworx-io/tatoeba",
   "title": "Tatoeba",
-  "description": "Tatoeba multilingual sentence corpus (~13M sentences, 400+ languages)",
-  "version": "0.1.0",
+  "description": "Tatoeba MCP — multilingual sentence corpus.",
+  "version": "0.1.1",
   "websiteUrl": "https://pipeworx.io/packs/tatoeba",
   "repository": {
     "url": "https://github.com/pipeworx-io/mcp-tatoeba",
