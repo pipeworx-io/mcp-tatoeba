@@ -1,0 +1,71 @@
+[
+  {
+    "name": "search",
+    "description": "Search sentences. Use ISO 639-3 codes (\"eng\",\"fra\",\"spa\",\"jpn\",\"cmn\",…) for from/to.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "string"
+        },
+        "from": {
+          "type": "string",
+          "description": "Source language (default any)."
+        },
+        "to": {
+          "type": "string",
+          "description": "Target translation language (default any)."
+        },
+        "page": {
+          "type": "number",
+          "description": "1-based (default 1)."
+        },
+        "limit": {
+          "type": "number",
+          "description": "1-100 (default 25)."
+        }
+      },
+      "required": [
+        "query"
+      ]
+    }
+  },
+  {
+    "name": "sentence",
+    "description": "Fetch a single Tatoeba sentence record by numeric ID; returns the sentence text, language code, author, and linked audio/translation metadata.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "id"
+      ]
+    }
+  },
+  {
+    "name": "translations",
+    "description": "Translations of a sentence.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "id"
+      ]
+    }
+  },
+  {
+    "name": "languages",
+    "description": "List all languages supported by Tatoeba with their ISO 639-3 codes and sentence counts; use codes as `from`/`to` values in `search`.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {}
+    }
+  }
+]
